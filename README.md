@@ -9,21 +9,16 @@ You are given a list of buses that stop at a bus stop. What is the shortest repr
 Input
 
 The first line of the input contains one integer 
-N,1≤N≤1000
-, the number of buses that stop at a bus stop. Then next line contains a list of 
-N
- space separated integers between 1 and 
-1
-000
-, which denote the bus numbers. All numbers are distinct.
+N,1≤N≤1000, the number of buses that stop at a bus stop. Then next line contains a list of 
+N space separated integers between 1 and 1000, which denote the bus numbers. All numbers are distinct.
 
 Output
 
 Print the shortest representation of the list of bus numbers. Use the format as in the example, separate numbers with single spaces and output them in sorted order.
 
-Sample Input 1	
-6
-180 141 174 143 142 175
+Sample Input 1:	
+6\
+180 141 174 143 142 175\
 
-Sample Output 1
-141-143 174 175 180
+Sample Output 1:
+141-143 174 175 180\
