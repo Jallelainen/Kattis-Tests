@@ -7,66 +7,64 @@ namespace Kattis_Tests
     {
         public static void Main()
         {
-            string busLinesStr = Console.ReadLine();
-            int.TryParse(busLinesStr, out int busLines);
-            string numbersStr = Console.ReadLine();
-            string[] busLineNumbersStr = numbersStr.Split(" ");
-            int removedChars = 3;
+            // Int bus length
+            int busLinesLength;
+            busLinesLength = 15;
+            
+            // The bus lines
+            int[] busLines = new int[]  { 22, 23, 24, 25, 50, 60, 40, 256, 232, 1, 3, 5, 7, 9, 65 };
+            
+            // Sorting bus numbers from smallest to biggest
+            Array.Sort(busLines);
 
-            Array.Sort(busLineNumbersStr);
+            // New array based on busLinesLength
+            int[] arr = new int[busLinesLength];
 
-            for (int i = 0; i < busLines - removedChars; i++)
-            {
-                bool num1Bool = int.TryParse(busLineNumbersStr[i], out int num1);
-                bool num2Bool = int.TryParse(busLineNumbersStr[i + 1], out int num2);
-                bool num3Bool = int.TryParse(busLineNumbersStr[i + 2], out int num3);
+            // Defined array index 
+            int i = 0;
 
-                if (num1Bool && num2Bool && num3Bool)
+            // Array 2 = busLine 0 at beginning
+            arr[i++] = busLines[0];
+
+            //Looping through all the bus line numbers
+            for(int j = 1; j < busLinesLength; j++) 
                 {
-                    if (num1 + 1 == num2 && num1 + 2 == num3)
-                    {
-                        busLineNumbersStr[i + 1] = "-";
-                    }
-                    else if (num1 + 1 == num2 && busLineNumbersStr[i - 1] == "-")
-                    {
-                        busLineNumbersStr = busLineNumbersStr.Where(var => var != busLineNumbersStr[i]).ToArray();
-                        removedChars++;
-                    }
-                    
-                }else if (!num1Bool)
+                // Validates if the bus line number before is current busLine - 1
+                if (busLines[j] == busLines[j - 1] + 1)
                 {
-                    if (busLineNumbersStr[i] == "-" && num2 + 1 == num3)
-                    {
-                        busLineNumbersStr = busLineNumbersStr.Where(var => var != busLineNumbersStr[i + 1]).ToArray();
-                        removedChars++;
-                    }
+                    // Jumps 1 in the index, doesn't print anything since you want to build a summarized object
+                    arr[i++] = busLines[j];
+                }
+                else 
+                {
+                    // Printing the numbers is its nog going to build a composite object 
+                    print(arr, i);
+                    // Reset array index
+                    i = 0;
+                    // Jumps 1 indec again 
+                    arr[i++] = busLines[j];
+                }
+                // Checks if it should print the last bus number or if its composite
+                if (j == busLinesLength - 1)
+                {
+                    print(arr, i);
+                }
                 }
             }
-
-            for (int i = 0; i < busLineNumbersStr.Length; i++)
+        
+            static void print(int[] arr, int i)
             {
-                if (i != busLineNumbersStr.Length - 1)
+                // If i > 2 its a contraction of bus numbers
+                if (i > 2)
                 {
-                    if (busLineNumbersStr[i + 1] == "-")
-                    {
-                        Console.Write($"{busLineNumbersStr[i]}");
-                    }
-                    else if (busLineNumbersStr[i] == "-")
-                    {
-                        Console.Write($"{busLineNumbersStr[i]}");
-                    }
-                    else
-                    {
-                        Console.Write($"{busLineNumbersStr[i]} ");
-                    }
+                    Console.WriteLine(arr[0] + "-" + arr[i - 1] + " ");
                 }
-                else
+                // Normal just printing out bus numbers
+                else 
                 {
-                    Console.Write($"{busLineNumbersStr[i]} ");
+                    Console.WriteLine(arr[0] + " ");
                 }
             }
-            Console.ReadKey();
         }
-    }
 }
 
