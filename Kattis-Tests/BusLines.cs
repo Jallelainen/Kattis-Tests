@@ -133,53 +133,7 @@ namespace Kattis_Tests
 
             return busLineNumbersStr;
         }
-
-
-        ////////////////////////////////
-        ///
-
-        public static void Apaxians()
-        {
-            Console.WriteLine(RemoveRepeats("bbobb"));
-            Console.WriteLine("abcdABCDabcd = " + GetFactorial("abcdABCDabcd".Length));
-
-            string input = Console.ReadLine();
-
-            while (input != "")
-            {
-                input = Console.ReadLine();
-                Console.WriteLine(GetFactorial(input.Length));
-            } 
-        }
-
-        public static string RemoveRepeats(string input)
-        {
-            string newString = input[0].ToString();
-
-            for (int i = 1; i < input.Length; i++)
-            {
-                if (input[i] != input[i - 1])
-                {
-                    newString = string.Concat(newString, input[i].ToString());
-                }
-              
-            }
-
-            return newString;
-        }
-
-        public static BigInteger GetFactorial(int length)
-        {
-            BigInteger fact = 1;
-
-            for (int x = 1; x <= length; x++)
-            {
-                fact *= x;
-            }
-
-
-            return fact;
-        }
+    
     }
 }
 
