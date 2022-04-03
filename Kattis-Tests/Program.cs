@@ -6,9 +6,11 @@ namespace Kattis_Tests
     {
         public static void Main()
         {
-            Console.WriteLine("1 = Shorten Apaxian Name");
-            Console.WriteLine("2 = Simplify Busline List");
-            Console.WriteLine("3 = Get Amount of unique Anagrams");
+            Console.WriteLine("---- WELCOME TO THE KATTIS SOLUTION PROGRAM ----");
+            Console.WriteLine();
+            Console.WriteLine("1 = The Apaxian Civilization");
+            Console.WriteLine("2 = The Bus line List Formater");
+            Console.WriteLine("3 = The Anagram Calculator");
             Console.WriteLine("");
             Console.WriteLine("Please select your choice by entering a number:");
 

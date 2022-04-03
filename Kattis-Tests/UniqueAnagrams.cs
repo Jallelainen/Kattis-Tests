@@ -10,7 +10,8 @@ namespace Kattis_Tests
     {
         public static void GetUniqueAnagrams()
         {
-            Console.WriteLine("Enter a word: ");
+            Console.Clear();
+            Console.WriteLine("Welcome to the Anagram Calculator. Please enter a word:");
             string input;
 
             while ((input = Console.ReadLine()) != null)
@@ -29,7 +30,11 @@ namespace Kattis_Tests
                     possibleAnagrams = MultinominalCoefficient(input, repeatedChars);
                 }
 
-                Console.WriteLine(possibleAnagrams);
+                Console.WriteLine("Total number of unique anagrams: " + possibleAnagrams);
+                Console.WriteLine("Press any key to continue");
+                Console.Read();
+                Console.Clear();
+                Console.WriteLine("Enter a word: ");
             }
         }
 
