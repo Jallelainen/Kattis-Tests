@@ -17,28 +17,23 @@ namespace Kattis_Tests
             {
                 char[] sortInput = input.ToCharArray();
                 Array.Sort(sortInput);
-                BigInteger possibleAnagrams = new BigInteger(1);
+                BigInteger possibleAnagrams = new BigInteger(0);
                 List<int> repeatedChars = CountDuplicates(sortInput, input);
-               
 
-                if (repeatedChars.Count == 0 && input.Length > 1)
+                if (repeatedChars.Count == 0)
                 {
                     possibleAnagrams = GetFactorial(input.Length);
                 }
-                else if(repeatedChars.Count > 1 && input.Length > 1)
+                else
                 {
-                    possibleAnagrams = CountAnagrams(input, repeatedChars);
-                }
-                else if (sortInput.Length == 0)
-                {
-                    possibleAnagrams = 0;
+                    possibleAnagrams = MultinominalCoefficient(input, repeatedChars);
                 }
 
                 Console.WriteLine(possibleAnagrams);
             }
         }
 
-        public static BigInteger CountAnagrams(string word, List<int> repeats)
+        public static BigInteger MultinominalCoefficient(string word, List<int> repeats)
         {
             BigInteger x = GetFactorial(word.Length);
             BigInteger y = 1;
