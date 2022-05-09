@@ -6,4 +6,10 @@
     <RootNamespace>Kattis_Tests</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Problems\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Problems\" />
+  </ItemGroup>
 </Project>

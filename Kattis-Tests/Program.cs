@@ -11,6 +11,7 @@ namespace Kattis_Tests
             Console.WriteLine("1 = The Apaxian Civilization");
             Console.WriteLine("2 = The Bus line List Formater");
             Console.WriteLine("3 = The Anagram Calculator");
+            Console.WriteLine("4 = The Distance Calculator");
             Console.WriteLine("");
             Console.WriteLine("Please select your choice by entering a number:");
 
@@ -26,6 +27,9 @@ namespace Kattis_Tests
                     break;
                 case 3:
                     UniqueAnagrams.GetUniqueAnagrams();
+                    break;
+                case 4:
+                    SpeedLimit.GetDistance();
                     break;
                 default:
                     break;
