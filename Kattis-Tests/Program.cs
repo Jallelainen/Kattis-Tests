@@ -12,6 +12,7 @@ namespace Kattis_Tests
             Console.WriteLine("2 = The Bus line List Formater");
             Console.WriteLine("3 = The Anagram Calculator");
             Console.WriteLine("4 = The Distance Calculator");
+            Console.WriteLine("5 = Set Volume(Skru op!)");
             Console.WriteLine("");
             Console.WriteLine("Please select your choice by entering a number:");
 
@@ -30,6 +31,9 @@ namespace Kattis_Tests
                     break;
                 case 4:
                     SpeedLimit.GetDistance();
+                    break;
+                case 5:
+                    Problems.SkruOp.ChangeVolume();
                     break;
                 default:
                     break;
