@@ -7,7 +7,7 @@ namespace Kattis_Tests
 {
     class BusLines
     {
-        public static void CalculateBusLines()
+        public static void BusLinesMain()
         {
 
             //Save input in variables

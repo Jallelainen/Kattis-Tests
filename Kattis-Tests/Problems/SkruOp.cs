@@ -3,7 +3,7 @@ namespace Kattis_Tests.Problems
 {
     public class SkruOp
     {
-        public static void ChangeVolume()
+        public static void SkruOpMain()
         {
             Console.Clear();
 

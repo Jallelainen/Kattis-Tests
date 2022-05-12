@@ -7,7 +7,7 @@ namespace Kattis_Tests
 {
     class Apaxians
     {
-        public static void ShortenApaxianName()
+        public static void ApaxiansMain()
         {
             string input = Console.ReadLine();
             Console.WriteLine(RemoveRepeats(input));

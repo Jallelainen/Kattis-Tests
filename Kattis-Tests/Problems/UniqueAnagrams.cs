@@ -8,7 +8,7 @@ namespace Kattis_Tests
 {
     class UniqueAnagrams
     {
-        public static void GetUniqueAnagrams()
+        public static void AnagramsMain()
         {
             Console.Clear();
             Console.WriteLine("Welcome to the Anagram Calculator. Please enter a word:");

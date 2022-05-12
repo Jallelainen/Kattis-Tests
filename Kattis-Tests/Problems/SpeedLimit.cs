@@ -5,7 +5,7 @@ namespace Kattis_Tests
 {
     public class SpeedLimit
     {
-        public static void GetDistance()
+        public static void SpeedLimitMain()
         {
             Console.Clear();
             Console.WriteLine("Wlcome to the Distance Calculator. ");
