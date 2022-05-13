@@ -15,6 +15,7 @@ namespace Kattis_Tests
             Console.WriteLine("5 = Set Volume(Skru op!)");
             Console.WriteLine("6 = Is it the Eye of Souron?");
             Console.WriteLine("7 = Detailed Differences");
+            Console.WriteLine("8 = Mirror Images");
             Console.WriteLine("");
             Console.WriteLine("Please select your choice by entering a number:");
 
@@ -42,6 +43,9 @@ namespace Kattis_Tests
                     break;
                 case 7:
                     Problems.DetailedDifferences.DetailedMain();
+                    break;
+                case 8:
+                    Problems.MirrorImages.MirrorMain();
                     break;
                 default:
                     break;
