@@ -38,6 +38,8 @@ namespace Kattis_Tests.Problems
                     Console.WriteLine(str2);
                     Console.WriteLine(visualisation);
                     Console.WriteLine("");
+
+                    visualisation.Clear();
                 }
             }
         }
